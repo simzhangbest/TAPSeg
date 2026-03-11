@@ -16,7 +16,7 @@
 
 **We provide a comprehensive video demonstration explaining the workflow and usage of TAPSeg:**
 
-**`<!-- Add your video link here -->`**
+
 
 [Video Tutorial](https://www.bilibili.com/video/BV1SCPyziEcG/)*(https://www.bilibili.com/video/BV1SCPyziEcG/)*
 
