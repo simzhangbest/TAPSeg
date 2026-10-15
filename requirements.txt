@@ -1,0 +1,11 @@
+torch==2.8.0
+numpy==1.26.4
+nnunetv2==2.5.1
+dynamic-network-architectures==0.3.1
+acvl-utils==0.2
+batchgenerators==0.25.1
+batchgeneratorsv2==0.2.3
+fft-conv-pytorch==1.2.0
+scipy==1.13.1
+scikit-image==0.22.0
+scikit-learn==1.6.1

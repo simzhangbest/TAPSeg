@@ -1,61 +1,39 @@
-# TAPSeg: An Open-Source Deep Learning Tool for Instance-Level Tooth and Pulp Segmentation in CBCT
+# TAPSeg
 
-## Introduction
+TAPSeg segments teeth and pulp from CBCT volumes in 3D Slicer and generates tooth hard-tissue masks by subtracting pulp from teeth.
 
-**TAPSeg is a deep learning-based tool designed for instance-level segmentation of teeth and dental pulp in Cone Beam Computed Tomography (CBCT) images. This open-source project aims to facilitate research and clinical applications in dental imaging analysis.**
+![TAPSeg in 3D Slicer](TAPSeg/Resources/Screenshots/TAPSeg.png)
 
-## Availability
+## Installation
 
-**Note:** The source code and pre-trained model weights will be partially released upon acceptance of our paper. We appreciate your patience and interest in our work. The released materials will include:
+1. Download [TAPSeg.7z](https://github.com/simzhangbest/TAPSeg/releases/download/v0.1.0/TAPSeg.7z) and extract it.
+2. In Slicer, open **Edit > Application Settings > Modules** and add the extracted `TAPSeg_refe/TAPSeg` directory to **Additional module paths**.
+3. Restart Slicer and select **Segmentation > TAPSeg**.
 
-* **Core model architecture and implementation**
-* **Pre-trained weights for tooth and pulp segmentation**
-* **Inference scripts and documentation**
+Python dependencies are listed in `requirements.txt` and must be installed in Slicer's Python environment.
 
-## Video Tutorial
+## Usage
 
-**We provide a comprehensive video demonstration explaining the workflow and usage of TAPSeg:**
+1. Load a CBCT volume and select it as the input.
+2. Select **Segment Teeth**.
+3. Select **Segment Pulp**.
+4. Select **Generate Tooth Hard Tissue Mask**.
+
+**Batch Segmentation** processes supported volumes in a selected directory. Export the resulting segmentation nodes with Slicer's save dialog.
+
+## Tutorial
+
+[Video tutorial](https://www.bilibili.com/video/BV1SCPyziEcG/)
+
+## Publication
+
+[TAPSeg: An open-source deep learning tool for instance-level tooth and pulp segmentation in CBCT](https://doi.org/10.1016/j.jdent.2026.106643). Journal of Dentistry, 171 (2026), 106643.
 
 
-
-[Video Tutorial](https://www.bilibili.com/video/BV1SCPyziEcG/)*(https://www.bilibili.com/video/BV1SCPyziEcG/)*
-
-### Workflow Overview
-
-**The TAPSeg pipeline consists of the following steps:**
-
-1. **Data Preparation**
-   * **Input: CBCT scans in NIfTI (.nii.gz) format.**
-2. **Model Inference**
-   * **Load pre-trained TAPSeg model**
-   * **Run instance-level segmentation on CBCT volumes**
-   * **Outputs generated:**
-     * **Whole tooth instance masks**
-     * **Dental pulp masks**
-     * **Hard tissue masks (automatically derived by subtracting the pulp from the whole tooth)**
-
-## Getting Started
-
-**Detailed installation and usage instructions will be provided upon release.**
-
-### Requirements
-
-* **Python 3.8+**
-* **PyTorch 1.10+**
-* **Additional dependencies (to be specified in requirements.txt)**
-
-## Citation
-
-**Our paper, "TAPSeg: An Open-Source Deep Learning Tool for Instance-Level Tooth and Pulp Segmentation in CBCT", is currently under review. The official citation format will be provided here immediately upon acceptance and publication.**
+Runtime checks do not establish clinical suitability. Review all automatically generated segmentations.
 
 ## License
 
-**License information will be provided upon release.**
+Copyright (c) 2026 Y Zhang.
 
-## Contact
-
-**For questions and inquiries, please open an issue on this repository.**
-
-## Acknowledgments
-
-**We thank all contributors and the open-source community for their support.**
+TAPSeg-specific source code and model weights are licensed under [Apache-2.0](LICENSE.txt). Commercial use, modification, and redistribution are permitted subject to the license terms. Third-party components retain their original licenses.
